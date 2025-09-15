@@ -20,8 +20,8 @@ MAX_LEN = 35
 VOCAB_SIZE = 12000
 EMBEDDING_DIM = 96
 BATCH_SIZE = 128
-EPOCHS = 40
-OUTPUT_DIR = "bigru_sarcasm_outputs"
+EPOCHS = 15
+OUTPUT_DIR = "Sarcasm_outputs"
 DATA_PATH = "../Dataset/Sarcasm_Headlines_Dataset_v2.json"
 ABBREV_PATH = "../Dataset/Abbreviations.csv"
 
@@ -166,7 +166,8 @@ plt.figure(figsize=(8, 6))
 cm = confusion_matrix(y_test, y_pred)
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
             xticklabels=['Not Sarcastic', 'Sarcastic'],
-            yticklabels=['Not Sarcastic', 'Sarcastic'])
+            yticklabels=['Not Sarcastic', 'Sarcastic'],
+            annot_kws={"size": 22} )
 plt.title('Confusion Matrix')
 plt.ylabel('True Label')
 plt.xlabel('Predicted Label')
