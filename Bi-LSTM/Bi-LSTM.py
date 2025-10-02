@@ -194,10 +194,12 @@ if __name__ == "__main__":
                 xticklabels=['Non-Sarcastic', 'Sarcastic'],
                 yticklabels=['Non-Sarcastic', 'Sarcastic'],
                 annot_kws={"size": 22} )
-    plt.title('Confusion Matrix')
-    plt.ylabel('True Label')
-    plt.xlabel('Predicted Label')
-    plt.savefig(os.path.join('sarcasm_outputs', 'confusion_matrix.png'), bbox_inches='tight')
+    plt.title('Confusion Matrix', fontsize=20)
+    plt.ylabel('True Label', fontsize=20)
+    plt.xlabel('Predicted Label',fontsize=20)
+    plt.xticks(fontsize=20)
+    plt.yticks(fontsize=20)
+    plt.savefig(os.path.join('sarcasm_outputs', 'confusion_matrix.png'), dpi=300, bbox_inches='tight')
     plt.close()
 
     print("All results saved to 'sarcasm_outputs' directory")
